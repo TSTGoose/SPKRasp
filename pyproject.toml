@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "spk"
+version = "0.1.0"
+description = ""
+authors = ["TSTGoose <epickplayer@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+wget = "^3.2"
+openpyxl = "^3.1.2"
+pydantic = "^2.4.2"
+pydantic-settings = "^2.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
