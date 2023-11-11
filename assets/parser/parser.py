@@ -1,3 +1,4 @@
+import asyncio
 import hashlib
 from pathlib import Path
 from pprint import pprint
@@ -23,7 +24,7 @@ class Lesson:
 class Parser(object):
 
     def __init__(self, path: Path, filename: str = "current_rasp.xlsx"):
-        self.document = load_workbook(f"{path}/{filename}", read_only=True)
+        self.document = load_workbook(f"{path}/{filename}", read_only=True, data_only=True)
         self.sheet = self.document["Основное расписание"]
         self.weektypes = Week.weektypes
 

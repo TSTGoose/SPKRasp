@@ -18,6 +18,8 @@ class SPKRasp:
         if not Path(path_for_document, "current_rasp.xlsx").exists():
             self.download_rasp()
 
+        self.start_parser()
+
     @staticmethod
     def download_rasp(filename: str = "current_rasp"):
         request.urlretrieve("http://spospk.ru/document/rasp/rasp.xlsx", f"assets/info/{filename}.xlsx")
